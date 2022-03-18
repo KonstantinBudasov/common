@@ -1,0 +1,52 @@
+$main-link
+  background-color transparent
+  font-weight 600
+  color $link-color
+  cursor pointer
+  transitions()
+  opacity 1
+  text-decoration none
+
+  &:hover
+  &.is-hovered
+    opacity 1
+    color $red-hover
+    text-decoration none
+
+  &:focus
+  &.is-focused
+    box-shadow 0 0 0 1px #fff, 0 0 0 3px #d4d4d4
+
+  &:focus
+  &.is-focused
+  &:active
+  &.is-active
+    border-radius $border-radius
+    outline none
+
+  &:active
+  &.is-active
+    color $red-hover
+
+  &:disabled
+  &[disabled]
+  &.is-disabled
+    &
+    &:hover
+    &:focus
+    &:active
+      color $red-hover
+      opacity 1
+      outline none
+      cursor not-allowed
+      pointer-events auto
+      user-select none
+      box-shadow none
+
+a, .link, .link-action
+  @extend $main-link
+
+.link-action
+  display inline-block
+  border-bottom 1px dashed
+  vertical-align inherit

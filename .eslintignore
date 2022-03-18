@@ -1,0 +1,7 @@
+/tmp
+/node_modules
+/.publish
+/dest
+/tools/_templates
+/source/scripts/core
+/source/scripts/helpers

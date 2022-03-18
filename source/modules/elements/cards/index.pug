@@ -1,0 +1,53 @@
+mixin cards-list(mods)
+	- var modifier = ""
+
+	if (mods)
+		if (mods.constructor === Array)
+			each mod in mods
+				- modifier += " cards-list--"+mod
+		else
+			- modifier = "cards-list--"+mods
+
+	.cards-list(class=modifier)
+		block
+
+mixin card(attributes)
+	-
+		let cardClasses = [];
+		let baseClassName = "card";
+		let cardTag = attributes.tag || "div";
+		let imgSrc = attributes.image || null;
+		let titleText = attributes.title || null;
+		let linkText = attributes.link || null;
+		let linkArrow = attributes.arrow || null;
+
+		cardClasses.push(baseClassName);
+		delete attributes.image;
+		delete attributes.title;
+		delete attributes.link;
+		delete attributes.arrow;
+
+		if (linkText || linkArrow)
+			cardTag = "a"
+
+	#{cardTag}(class=cardClasses)&attributes(attributes)
+		if (imgSrc)
+			img(src=imgSrc
+				title= "Card icon"
+				alt= "Card icon" class=baseClassName + "__illustration")
+
+		if (titleText)
+			div(class=baseClassName + "__title")
+				| !{titleText}
+
+		if (block)
+			div(class=baseClassName + "__text")
+				block
+
+		if (linkText)
+			div(class=baseClassName + "__link")
+				= linkText
+
+		if (linkArrow)
+			+action-arrow()
+				= linkArrow

@@ -1,0 +1,137 @@
+// System variables
+@import "_core/_variables.styl"
+
+// System mixins
+@import "_core/_mixins.styl"
+
+// Base styles
+@import "_core/_base.styl"
+
+// pdfmp-399 exp for product header
+.slideout-menu
+  .mobile-menu__submenu
+    display block
+    padding-left 0
+
+.g-header__container
+  max-width 960px !important
+
+.g-header__logo
+  padding-right 0
+
+.g-header--responsive .g-main-nav__item--desktop
+  display table-cell
+  
+  +below($media-screen-desktop - 1)
+    display none
+
+  +above($media-screen-desktop)
+    display table-cell !important
+
+#header .g-main-nav__item--action-start-trial .g-btn
+#header .g-btn--empty-primary
+  min-width 158px
+  color #888
+  font-size 14px
+  line-height 18px
+  border-radius 4px
+  cursor pointer
+  font-weight $font-weight-semiBold
+  text-align center
+  text-decoration none
+  letter-spacing 0.3px
+  transition all 0.15s ease-in
+  user-select none
+  touch-action manipulation
+  -webkit-font-smoothing antialiased
+  &:hover
+  &:active
+  &:focus
+    color #fff
+
+.g-main-nav__separator
+.mobile-menu-trigger
+.mobile-menu-btn
+  +above($media-screen-desktop)
+    display none !important
+
+.g-main-nav__item--desktop
+  .g-main-nav__link--subnav
+    &:first-child
+      padding-right 0
+
+.ReactModal__Overlay
+  z-index 1111
+  -ms-flex-direction column
+
+.mobile-menu-btn
+  display none
+  float right
+  flex-direction column
+  align-items center
+  justify-content center
+  width 50px
+  height 100%
+  margin 0
+  cursor pointer
+
+  +below($media-screen-tablet - 1)
+    display flex
+
+.mobile-menu-btn::before,
+.mobile-menu-btn span, .mobile-menu-btn::after
+  content ""
+  width 24px
+  height 3px
+  background-color: #666
+
+.mobile-menu-btn::before:hover,
+.mobile-menu-btn span:hover,
+.mobile-menu-btn::after:hover
+  background-color #5c5c5c
+
+.mobile-menu-btn::before
+.mobile-menu-btn span
+  margin-bottom 4px
+
+.g-header__logo .g-header__switcher .g-header__dropdown
+  z-index 11
+
+// hack, delete after scale pdfmp-532
+.layout-responsive__header--redesigned .page-header--redesigned
+  position fixed !important
+  +above(1105px)
+    position relative !important
+// Hacks
+//@import "_core/_hacks.styl"
+.main-menu__item .main-menu__link--free-trial
+  cursor pointer
+
+html[lang='es']
+  .main-menu__link--free-trial
+    display none
+
+  .main-menu__link
+  a.main-menu__link
+    font-size 11px
+    padding 18px 6px 16px
+
+  .user-dropdown-menu
+  .user-dropdown-details__table
+    width 324px
+
+  .user-dropdown-details__table td:first-child
+    margin-left 0
+    width 160px
+
+  .nav .nav-dropdown__link
+  .nav .nav__link
+    white-space normal
+
+  body
+    &.is-ie11
+      .nav-dropdown__column--right
+        min-width 272px
+
+  body.is-ie11 .nav .has-dropdown:nth-child(3) .nav-dropdown__column:nth-child(2)
+    min-width 218px

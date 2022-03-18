@@ -1,0 +1,44 @@
+@import "variables/_index.styl"
+
+.cards-list
+  grid-row(32)
+
+  &:last-child
+    +above($media-screen-tablet)
+      margin-bottom -32px
+
+  .card
+    grid-column-margin(32)
+    width calc(100% - 32px)
+
+    +above($media-screen-tablet)
+      width calc(50% - 32px)
+      margin-bottom 32px
+
+    +above($media-screen-tablet-lg)
+      width calc((100% / 3) - 32px)
+
+    &:not(:last-child)
+      margin-bottom 16px
+
+      +above($media-screen-tablet)
+        margin-bottom 32px
+
+.card,
+a.card
+  @extends $card
+
+a.card
+  @extends $card-as-link
+
+.card__illustration
+  @extends $card-illustration
+
+.card__title
+  @extends $card-title
+
+.card__text
+  @extends $card-text
+
+.card__link
+  @extends $card-link

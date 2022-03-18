@@ -1,0 +1,38 @@
+include ../modules/_modules
+
+doctype html
+html(lang=config.lang data-offcanvas-container)
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		meta(content="IE=edge" http-equiv="X-UA-Compatible")
+
+		// Meta tags
+		meta(name="description" content=description)
+		meta(name="keywords" content=keywords)
+		meta(name="format-detection" content="telephone=no")
+		meta(name="format-detection" content="address=no")
+		meta(name="robots" content="noodp, noydir")
+
+		block head
+			// Title
+			title title
+
+		// Styles
+		block styles
+
+		//favicon
+		link(rel="shortcut icon" href="favicons/favicon-mkt-8813/favicon.ico" type="image/x-icon")
+		link(rel="icon", type="image/png", sizes="32x32", href="favicons/favicon-mkt-8813/favicon-32x32.png")
+		meta(name="msapplication-config" content="favicons/favicon-mkt-8813/browserconfig.xml")
+		meta(name="msapplication-TileImage", content="favicons/favicon-mkt-8813/mstile-150x150.png")
+
+		<script>;(function(d,e,c,r){e=d.documentElement;c="className";r="replace";e[c]=e[c][r]("i-ua_js_no","i-ua_js_yes");if(d.compatMode!="CSS1Compat")e[c]=e[c][r]("i-ua_css_standart","i-ua_css_quirks")})(document);</script>
+
+	body
+		block page
+
+		script(src=config.path.scripts + "/vendor.js")
+		script(src=config.path.scripts + "/main.js")
+
+		block scripts
