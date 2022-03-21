@@ -14,3 +14,498 @@
 @import "../modules/containers/modal/index.styl"
 @import "../modules/containers/modal/close/index.styl"
 @import "../modules/containers/accordion/index.styl"
+
+p
+    margin-bottom: 8px
+    font-size 12px
+    line-height 16px
+
+.layout-responsive__body
+    display block
+
+.section-title
+    margin-bottom: 8px
+    text-align: left
+    font-weight: 900
+    font-size: 24px
+    line-height 32px
+
+.section-subtitle
+    text-align: left
+    font-weight: 400
+    font-size: 12px
+    line-height 16px
+
+.viewport-area__step
+    padding: 0 16px
+
+.button-scroll-up
+    display: none
+
+// global end
+
+.go-back-link 
+    display: none
+    position: fixed
+    background: #FFFFFF;
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 8px 8px;
+    padding: 16px 16px 16px 42px
+    top: 0
+    width: 100%
+    color: #808080;
+    z-index 99
+    &:before
+        content: ''
+        position: absolute
+        background-image: url('../images/payment-mobile/go-back-link.svg')
+        background-repeat: no-repeat;
+        background-size: 16px
+        width: 20px
+        height: 20px
+        left: 20px
+        top: 20px
+
+.go-back-link.go-back-link--fixed
+    display: block
+
+
+.layout-responsive__header
+    padding-top: 55px;
+
+.page-section--header
+    min-width 52px
+    border-bottom: 1px solid #E9E9E9;
+
+.breadcrumbs
+    display: flex
+    padding: 12px 0
+
+.breadcrumbs__item
+    position: relative
+    font-weight 600
+    font-size 12px
+    line-height 16px
+    &:not(:last-child)
+        margin-right: 28px
+        &:after
+            content: ''
+            position: absolute
+            width: 16px
+            height: 16px
+            right: -21px
+            top: 0
+            background-image: url('../images/payment-mobile/waiting-arrow.svg')
+            background-repeat: no-repeat;
+            background-position: center;
+    a
+        color: #BFBFBF
+
+.breadcrumbs__item.is-active
+    &:not(:last-child)
+        &:after
+            content: ''
+            position: absolute
+            width: 16px
+            height: 16px
+            right: -21px
+            top: 0
+            background-image: url('../images/payment-mobile/waiting-arrow-active.svg')
+            background-repeat: no-repeat;
+            background-position: center;
+    a
+        color: #2192EF;
+
+.period-switcher
+    background: #EDEDED
+    display: flex
+    justify-content: space-between
+    border-radius: 6px
+    font-size 12px
+    line-height 16px
+    padding: 4px
+    margin-bottom: 12px
+    
+.period-switcher-emphasis 
+    font-weight 700 
+    color: #2C2C2C
+    margin-right: 8px
+
+.period-switcher__item
+    display: flex
+    border-radius: 6px;
+    padding: 12px
+    font-weight 600 
+    color: #808080
+
+.period-switcher__item.is-active
+    background: #FFFFFF;
+
+.period-switcher__item-caption
+    font-weight 600 
+    color: #808080
+
+.plans-list__item
+    &:not(:last-child)
+        margin-bottom: 8px
+
+.plan
+    position: relative
+    padding: 16px
+    border: 1px solid #AAAAAA;
+    border-radius: 8px;
+
+.plan.is-best-value
+    border-radius: 0 0 8px 8px;
+    margin-top: 32px
+    &:before
+        position: absolute
+        content: 'Best value'
+        width: 100%
+        min-height: 24px
+        background: #2192EF;
+        top: -25px
+        left: -1px
+        color: white
+        text-align: center
+        border: 1px solid #2192EF;
+        border-radius: 8px 8px 0px 0px;
+        font-weight 600
+        font-size 13px
+
+
+.plan__summary-column
+    position relative
+    .section-title
+        margin: 0
+        font-size 18px
+        line-height 20px
+    .section-subtitle
+        margin: 0
+        font-size 12px
+        line-height 16px
+        color: #808080;
+    &:first-child
+        padding-left: 28px
+    &:last-child
+        padding-right: 30px
+
+.plan__expand-status-icon
+    position: absolute
+    top: 0
+    right: 0
+    width: 16px
+    height: 16px
+    background: #E9E9E9;
+    border-radius: 4px
+    background-image: url('../images/payment-mobile/plan-expand-status-icon.svg')
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 15px
+
+
+.plan__price-value 
+    font-weight 900
+    font-size 18px
+    line-height 20px
+
+.plan__summary
+    display: flex
+    justify-content: space-between
+
+.plan__checkbox
+    position: absolute
+    width: 16px
+    height: 16px
+    border: 1px solid #AAAAAA;
+    border-radius: 4px
+    top: 0
+    left: 0
+
+.plan__price 
+    font-size 12px
+    line-height 16px
+    font-weight: 400
+    text-align: right
+
+.plan__price-description 
+    font-size 12px
+    line-height 16px
+    font-weight: 400
+    color: #808080;
+    text-align: right
+
+.plan__details
+    display: none
+
+.plan.is-expanded
+    border: 1px solid #FFA42E;
+    .plan__checkbox
+        background: #FF9000;
+        border: none
+        background-image: url('../images/payment-mobile/plan-checkbox-checked.svg')
+        background-repeat: no-repeat;
+        background-position: center;
+    .plan__details
+        display: block
+
+.plan__period
+    background: #F5F5F5;
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center
+    padding: 12px
+    margin: 16px 0
+
+.plan__features-title
+    font-size 14px
+    line-height 20px
+    font-weight: 700
+    margin-bottom: 12px
+
+.plan__features-list-item
+    position: relative
+    padding-left: 28px
+    font-size 12px
+    line-height 16px
+    font-weight: 400
+    &:not(:last-child)
+        margin-bottom: 12px
+    &:before
+        content: ''
+        position: absolute
+        width: 16px
+        height: 16px
+        left: 0
+        top: 0
+        background-image: url('../images/payment-mobile/plan-features-list-icon.svg')
+        background-repeat: no-repeat;
+        background-position: center;
+
+.service-benefits__items
+    display: flex
+    align-items: center
+    padding-top: 12px
+
+.service-benefits__item-image
+    background: #F3F9FE;
+    border-radius: 6px;
+    padding: 8px
+    text-align: center
+    margin-right: 12px 
+
+.service-benefits__item
+    font-weight 400
+    font-size 12px
+    line-height 16px
+
+.emphasis-benefits
+    font-weight 700
+
+.page-footer
+    margin: auto
+    padding: 16px
+    text-align: center
+
+.button--bot
+    width: 100%
+    padding: 12px
+
+.page-footer--sticky
+    left: 50%
+    transform: translate(-50%, 0%);
+    position: fixed;
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.2);
+    border-radius: 8px 8px 0px 0px;
+    bottom: 0;
+    background: #fff;
+    width: 100%;
+
+.payments-methods
+    margin-bottom 24px
+
+.payments-method
+    padding: 12px
+    text-align: center
+    min-width: 100%
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+
+.payments-methods__item
+    background: #F5F5F5;
+    border-radius: 4px;
+    &:not(:last-child)
+        margin-bottom: 8px
+
+
+.payments-method.is-active
+    background: #fff
+    border: 1px solid #FFA42E;
+    box-sizing: border-box;
+    border-radius: 4px;
+    position: relative
+    &:after
+        content: ''
+        position: absolute
+        width: 16px
+        height: 16px
+        background-image: url('../images/payment-mobile/active-paymant.svg')
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 16px
+        border-radius: 50px;
+        right: 6px
+        top: 6px
+
+.form--payment
+    display: block
+    margin-top: 24px
+
+.form-input
+    padding: 10px
+    font-size: 14px
+    line-height: 20px
+    min-height: 40px
+    box-shadow: none
+
+.form__row-column
+    display: flex
+    .form__row
+        flex: 1 1 auto;
+        &:not(:last-child)
+            margin-right: 16px
+        &:last-child
+            position relative
+            &:after
+                content: ''
+                position: absolute
+                background-image: url('../images/payment-mobile/form-help-info.svg')
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 16px
+                height: 16px
+                top: 12px
+                right: 12px
+
+.purchase-summary__title
+    font-weight 700
+    font-size 14px
+    line-height 20px
+    margin-bottom 16px
+
+.purchase-summary__plan
+    display: flex
+    padding 16px 0
+    border-top 1px solid #E9E9E9;
+    border-bottom 1px solid #E9E9E9;
+    margin-bottom 16px
+
+.purchase-summary__plan-logo
+    display inline-block
+    border-radius: 8px;
+    margin-right 16px
+
+.purchase-summary__plan-details
+    line-height 20px
+    display: flex;
+    flex-direction: column;
+    strong
+        margin-bottom 4px
+    span
+        font-size 12px
+        line-height 16px
+
+.purchase-summary__switcher
+    display: flex;
+    flex-direction: column;
+    margin-bottom 16px
+    font-size 14px
+    line-height 20px
+    span
+        font-size 12px
+        line-height 16px        
+
+.purchase-summary__charge
+    background: #F5F5F5;
+    border-radius: 4px;
+    padding: 12px 16px
+    margin-bottom 16px
+    display: flex
+    justify-content: space-between
+    span
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 24px;
+
+.purchase-summary__trial-end-note
+    line-height 16px
+    font-size 12px
+    font-weight: 400
+    margin-bottom 24px
+    color: #6B6B6B;
+
+.trial-risk-free
+    position: relative
+    background: #0F1D58;
+    border-radius: 4px;
+    color: #fff
+    padding: 20px 16px 16px 16px
+
+.trial-risk-free__icon 
+    position: absolute
+    right: 18px
+    top: 18px
+
+.trial-risk-free__title
+    font-size 20px
+    line-height 24px
+    font-weight: 700
+    margin-bottom 8px
+
+.company-address
+    font-size 12px
+    line-height 16px
+    padding: 16px 0
+    color: #6B6B6B;
+    margin-bottom 16px
+    border-bottom: 1px solid #E9E9E9;
+
+.terms-conditions-agreement
+    position: relative
+    font-size 11px
+    line-height: 16px
+    padding-left: 24px
+    a
+        color: #2192EF;
+        text-decoration: underline
+
+.terms-conditions-agreement__checkbox
+    position: absolute
+    width: 16px
+    height: 16px
+    border: 1px solid #AAAAAA;
+    border-radius: 4px
+    top: 0
+    left: 0
+
+.payment-success-decoration
+    margin: 24px 0
+
+.button--go-to-docs
+    margin-bottom 52px
+
+// plans
+.purchase-summary
+    display: none
+
+// active plan
+.purchase-summary.is-active
+    display: block
+
+
+
+
+
