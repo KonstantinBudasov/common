@@ -184,7 +184,27 @@ block main
 								| 180-day 
 							| money-back guarantee
 
+	//- .modal#modal-validation.is-visible
+	//- 	.modal__overlay 
+	//- 	.modal__inner
+	//- 		.modal__image
+	//- 			img(src="./images/payment-mobile/info.svg", alt="Info").modal__image-info
+	//- 		.modal__message 
+	//- 			| Oops, you seem to already have an active subscription. If you would like to change subscription type or payment method, please go to “My Account” page.
+	//- 		.modal__button
+	//- 			+button(class="button--modal") 
+	//- 				| Ok
 
+	.modal#modal-validation.is-visible
+		.modal__overlay 
+		.modal__inner
+			.modal__image
+				img(src="./images/payment-mobile/info-safari-icon.svg", alt="Info").modal__image-info
+			.modal__message 
+				| Please make sure you are using the Safari browser and your iOS device is compatible with Apple Pay.
+			.modal__button
+				+button(class="button--modal") 
+					| Ok
 
 block footer
 	.page-footer.page-footer--sticky
