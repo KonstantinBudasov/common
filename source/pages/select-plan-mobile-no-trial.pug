@@ -1,0 +1,185 @@
+extends ../layouts/mobile
+
+block head
+	title Welcome
+
+block styles
+	link(rel="stylesheet" href=config.path.styles + "/payment-mobile.css")
+
+block scripts
+	script(src=config.path.scripts + "/paymentMobile.js")
+
+block main
+	section(aria-label="Page header").page-section.page-section--header
+
+	section(aria-label="Payment plans").viewport-area
+		.viewport-area__step
+			.breadcrumbs
+				.breadcrumbs__item.is-active
+					a(href="#").breadcrumbs__link 
+						| Select a plan 
+				.breadcrumbs__item
+					a(href="#").breadcrumbs__link 
+						| Pay 
+				.breadcrumbs__item
+					a(href="#").breadcrumbs__link 
+						| Enjoy pdfFiller
+			
+			.section-title
+				| Select your plan for digitizing workflows  
+			.section-subtitle
+				| Unlock your PDFs and build error-free document workflows from anywhere. Get signNow eSignatures with the Premium plan.
+
+			.plans-area
+				.period-switcher
+					.period-switcher__item.is-active
+						span.period-switcher-emphasis 
+							| Annual
+						.period-switcher__item-caption
+							| Up to 70% OFF
+					.period-switcher__item
+						| Month-to-month
+
+				.plans-list
+					.plans-list__item
+						.plan.is-expanded
+							.plan__summary
+								.plan__summary-column
+									.plan__checkbox
+									.section-title
+										| Basic
+									.section-subtitle
+										| One user
+								.plan__summary-column
+									.plan__price 
+										span.plan__price-value 
+											| $8
+										| /month
+									.plan__expand-status-icon
+
+							.plan__details
+								.plan__period
+									| Annual Commitment
+								.plan__features
+									.plan__features-title
+										| Fill out, edit, and annotate PDFs
+									.plan__features-list
+										.plan__features-list-item
+											| Delete and add text, draw, leave comments
+										.plan__features-list-item
+											| Convert and manage PDFs
+										.plan__features-list-item
+											| Blackout, highlight, eSign
+										.plan__features-list-item
+											| Access documents from anywhere
+
+					.plans-list__item
+						.plan
+							.plan__summary
+								.plan__summary-column
+									.plan__checkbox
+									.section-title
+										| Basic
+									.section-subtitle
+										| Up to 3 users
+								.plan__summary-column
+									.plan__price 
+										span.plan__price-value 
+											| $12
+										| /month
+									.plan__price-description 
+										| from $4 per user
+									.plan__expand-status-icon
+
+							.plan__details
+								.plan__period
+									| Annual Commitment
+								.plan__features
+									.plan__features-title
+										| Fill out, edit, and annotate PDFs
+									.plan__features-list
+										.plan__features-list-item
+											| Delete and add text, draw, leave comments
+										.plan__features-list-item
+											| Convert and manage PDFs
+										.plan__features-list-item
+											| Blackout, highlight, eSign
+										.plan__features-list-item
+											| Access documents from anywhere
+
+					.plans-list__item
+						.plan.is-best-value
+							.plan__summary
+								.plan__summary-column
+									.plan__checkbox
+									.section-title
+										| Basic
+									.section-subtitle
+										| Up to 5 users
+								.plan__summary-column
+									.plan__price 
+										span.plan__price-value 
+											| $15
+										| /month
+									.plan__price-description 
+										| from $3 per user
+									.plan__expand-status-icon
+
+							.plan__details
+								.plan__period
+									| Annual Commitment
+								.plan__features
+									.plan__features-title
+										| Fill out, edit, and annotate PDFs
+									.plan__features-list
+										.plan__features-list-item
+											| Delete and add text, draw, leave comments
+										.plan__features-list-item
+											| Convert and manage PDFs
+										.plan__features-list-item
+											| Blackout, highlight, eSign
+										.plan__features-list-item
+											| Access documents from anywhere
+
+				.service-benefits
+					.service-benefits__items
+						.service-benefits__item-image
+							svg(width='24' height='24' viewbox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+								path(fill-rule='evenodd' clip-rule='evenodd' d='M6.789 10.4209C4.697 10.4209 3 12.1179 3 14.2109C3 16.3039 4.697 17.9999 6.789 17.9999H17.21C19.303 17.9999 21 16.3029 21 14.2109C21 12.1189 19.303 10.4219 17.211 10.4219C17.211 7.54394 14.878 5.21094 12 5.21094C9.122 5.21094 6.789 7.54294 6.789 10.4209Z' stroke='#2192EF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round')
+
+						.service-benefits__item
+							| Every plan includes 
+							span.emphasis-benefits
+								| free 
+							| unlimited cloud storage 
+					.service-benefits__items
+						.service-benefits__item-image
+							svg(width='24' height='24' viewbox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+								path(d='M7.63306 10.726C7.63306 9.91195 8.29306 9.25195 9.10706 9.25195C9.92106 9.25195 10.5811 9.91195 10.5811 10.726C10.5811 12.568 7.63306 12.568 7.63306 14.75H10.5811' stroke='#2192EF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round')
+								path(d='M15.532 14.7501C15.532 14.7501 15.532 13.8761 15.532 13.4951H16.367H15.532H13.168C12.744 13.4951 12.477 13.0391 12.69 12.6721C13.281 11.6551 13.965 10.5041 14.592 9.49011C14.861 9.05411 15.532 9.25011 15.532 9.76211V13.4951' stroke='#2192EF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round')
+								path(d='M20.424 4.80298V7.69598H17.531H20.424' stroke='#2192EF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round')
+								path(d='M19.905 7.696C18.379 4.899 15.412 3 12 3C7.029 3 3 7.03 3 12C3 16.97 7.029 21 12 21C16.971 21 21 16.97 21 12' stroke='#2192EF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round')
+
+						.service-benefits__item
+							span.emphasis-benefits 
+								| 24/7 
+							| customer support
+					.service-benefits__items
+						.service-benefits__item-image
+							svg(width='24' height='24' viewbox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+								path(d='M7.63306 10.726C7.63306 9.91195 8.29306 9.25195 9.10706 9.25195C9.92106 9.25195 10.5811 9.91195 10.5811 10.726C10.5811 12.568 7.63306 12.568 7.63306 14.75H10.5811' stroke='#2192EF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round')
+								path(d='M15.532 14.7501C15.532 14.7501 15.532 13.8761 15.532 13.4951H16.367H15.532H13.168C12.744 13.4951 12.477 13.0391 12.69 12.6721C13.281 11.6551 13.965 10.5041 14.592 9.49011C14.861 9.05411 15.532 9.25011 15.532 9.76211V13.4951' stroke='#2192EF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round')
+								path(d='M20.424 4.80298V7.69598H17.531H20.424' stroke='#2192EF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round')
+								path(d='M19.905 7.696C18.379 4.899 15.412 3 12 3C7.029 3 3 7.03 3 12C3 16.97 7.029 21 12 21C16.971 21 21 16.97 21 12' stroke='#2192EF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round')
+
+						.service-benefits__item
+							span.emphasis-benefits 
+								| 180-day 
+							| money-back guarantee
+
+block footer
+	.page-footer.page-footer--sticky
+		+button(class="button--footer" disabled) 
+			| Proceed to Checkout
+
+

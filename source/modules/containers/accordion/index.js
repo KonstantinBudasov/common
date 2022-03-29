@@ -1,8 +1,7 @@
-import { KEYCODES } from '@/scripts/helpers/constants/keyCodes';
 import $ from 'jquery';
 
 export default mode => {
-  const { ENTER } = KEYCODES;
+  const ENTER = 13;
   const element = $('.accordion');
 
   $.each(element, (key, value) => {
