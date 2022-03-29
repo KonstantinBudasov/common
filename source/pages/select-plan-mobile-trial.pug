@@ -5,32 +5,33 @@ block head
 
 block styles
 	link(rel="stylesheet" href=config.path.styles + "/payment-mobile.css")
-	//- link(rel="preconnect" href="https://fonts.googleapis.com")
-	//- link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
-	//- link(href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap" rel="stylesheet")
 
 block scripts
 	script(src=config.path.scripts + "/paymentMobile.js")
 
 block main
-	section(aria-label="Header menu").page-section.page-section--header
-	section(aria-label="Paymant plan").viewport-area
+	section(aria-label="Page header").page-section.page-section--header
+
+	section(aria-label="Payment plans").viewport-area
 		.viewport-area__step
 			.breadcrumbs
 				.breadcrumbs__item.is-active
-					a(href="select-your-plan-no-trial-user.html").breadcrumbs__link 
+					a(href="#").breadcrumbs__link 
 						| Select a plan 
 				.breadcrumbs__item
-					a(href="pay-no-trial-user.html").breadcrumbs__link 
+					a(href="#").breadcrumbs__link 
 						| Pay 
 				.breadcrumbs__item
-					a(href="payment-success.html").breadcrumbs__link 
+					a(href="#").breadcrumbs__link 
 						| Enjoy pdfFiller
 			
 			.section-title
-				| Select your plan for digitizing workflows  
+				| Select your plan
 			.section-subtitle
-				| Unlock your PDFs and build error-free document workflows from anywhere. Get signNow eSignatures with the Premium plan.
+				| Switch plans or cancel anytime. Every plan includes a 30-day free trial. The 
+				strong 
+					| Premium plan 
+				| includes the signNow eSignature solution.
 
 			.plans-area
 				.period-switcher
@@ -58,7 +59,7 @@ block main
 											| $8
 										| /month
 									.plan__expand-status-icon
-										//- img(src="", alt="")
+
 							.plan__details
 								.plan__period
 									| Annual Commitment
@@ -92,7 +93,7 @@ block main
 									.plan__price-description 
 										| from $4 per user
 									.plan__expand-status-icon
-										//- img(src="", alt="")
+
 							.plan__details
 								.plan__period
 									| Annual Commitment
@@ -126,7 +127,7 @@ block main
 									.plan__price-description 
 										| from $3 per user
 									.plan__expand-status-icon
-										//- img(src="", alt="")
+
 							.plan__details
 								.plan__period
 									| Annual Commitment
@@ -142,8 +143,6 @@ block main
 											| Blackout, highlight, eSign
 										.plan__features-list-item
 											| Access documents from anywhere
-
-
 
 				.service-benefits
 					.service-benefits__items
@@ -181,7 +180,27 @@ block main
 								| 180-day 
 							| money-back guarantee
 
+	//- .modal#modal-validation.is-visible
+	//- 	.modal__overlay 
+	//- 	.modal__inner
+	//- 		.modal__image
+	//- 			img(src="./images/payment-mobile/icon-info-square.svg", alt="icon").modal__image-info
+	//- 		.modal__message 
+	//- 			| Oops, you seem to already have an active subscription. If you would like to change subscription type or payment method, please go to “My Account” page.
+	//- 		.modal__button
+	//- 			+button(class="button--modal") 
+	//- 				| Ok
 
+	//- .modal#modal-validation.is-visible
+	//- 	.modal__overlay 
+	//- 	.modal__inner
+	//- 		.modal__image
+	//- 			img(src="./images/payment-mobile/icon-safari.svg", alt="icon").modal__image-info
+	//- 		.modal__message 
+	//- 			| Please make sure you are using the Safari browser and your iOS device is compatible with Apple Pay.
+	//- 		.modal__button
+	//- 			+button(class="button--modal") 
+	//- 				| Ok
 
 block footer
 	.page-footer.page-footer--sticky

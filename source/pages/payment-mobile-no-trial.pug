@@ -5,20 +5,14 @@ block head
 
 block styles
 	link(rel="stylesheet" href=config.path.styles + "/payment-mobile.css")
-	//- link(rel='stylesheet' href='https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css')
-	//- link(rel="preconnect" href="https://fonts.googleapis.com")
-	//- link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
-	//- link(href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap" rel="stylesheet")
 
 block scripts
 	script(src=config.path.scripts + "/paymentMobile.js")
-	//- script(src='https://code.jquery.com/jquery-1.11.1.min.js')
-	//- script(src='https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js')
 
 block main
-	section(aria-label="Header menu").page-section.page-section--header
+	section(aria-label="Page header").page-section.page-section--header
 
-	section(aria-label="Paymant plan").viewport-area
+	section(aria-label="Payment plans").viewport-area
 		a(href="select-your-plan.html").go-back-link
 			| Go back to 
 			strong
@@ -26,13 +20,13 @@ block main
 		.viewport-area__step
 			.breadcrumbs
 				.breadcrumbs__item.is-active
-					a(href="select-your-plan-no-trial-user.html").breadcrumbs__link  
+					a(href="#").breadcrumbs__link  
 						| Select a plan 
 				.breadcrumbs__item.is-active
-					a(href="pay-trial-user.html").breadcrumbs__link 
+					a(href="#").breadcrumbs__link 
 						| Pay 
 				.breadcrumbs__item
-					a(href="payment-success.html").breadcrumbs__link 
+					a(href="#").breadcrumbs__link 
 						| Enjoy pdfFiller
 			
 			.section-title
@@ -94,10 +88,10 @@ block main
 							input(type="text" placeholder="Last name").form-input
 						.form__row
 							input(type="text" placeholder="Card number").form-input
-						.form__row-column
-							.form__row
+						.form__row
+							.form__row-column
 								input(type="text" placeholder="Exp. Date").form-input
-							.form__row
+							.form__row-column
 								input(type="text" placeholder="CVV/CVC").form-input
 						.form__row
 							input(type="text" placeholder="Zip code").form-input
@@ -186,7 +180,7 @@ block main
 					span 
 						| Today’s charge:
 					span
-						| $0.00	
+						| $0.00
 
 			.trial-risk-free
 				.trial-risk-free__icon 
@@ -210,10 +204,9 @@ block main
 				a(href="#") 
 					| Terms and Conditions
 
-
 block footer
 	.page-footer.page-footer--sticky
-		+button(class="button--bot button--start-subscription" disabled) 
+		+button(class="button--footer" disabled) 
 			| Start my pdfFiller subscription
 
 

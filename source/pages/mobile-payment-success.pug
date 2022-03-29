@@ -5,29 +5,24 @@ block head
 
 block styles
 	link(rel="stylesheet" href=config.path.styles + "/payment-mobile.css")
-	//- link(rel='stylesheet' href='https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css')
-	//- link(rel="preconnect" href="https://fonts.googleapis.com")
-	//- link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
-	//- link(href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap" rel="stylesheet")
 
 block scripts
 	script(src=config.path.scripts + "/paymentMobile.js")
-	//- script(src='https://code.jquery.com/jquery-1.11.1.min.js')
-	//- script(src='https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js')
 
 block main
-	section(aria-label="Header menu").page-section.page-section--header
-	section(aria-label="Paymant plan").viewport-area
+	section(aria-label="Page header").page-section.page-section--header
+
+	section(aria-label="Payment plans").viewport-area
 		.viewport-area__step
 			.breadcrumbs
 				.breadcrumbs__item.is-active
-					a(href="select-your-plan-trial-user.html").breadcrumbs__link  
+					a(href="#").breadcrumbs__link  
 						| Select a plan 
 				.breadcrumbs__item.is-active
-					a(href="pay-trial-user.html").breadcrumbs__link 
+					a(href="#").breadcrumbs__link 
 						| Pay 
 				.breadcrumbs__item.is-active
-					a(href="payment-success.html").breadcrumbs__link 
+					a(href="#").breadcrumbs__link 
 						| Enjoy pdfFiller
 			
 			.section-title
@@ -69,12 +64,9 @@ block main
 					path(d='M183.623 103.408L186.938 100.347C187.759 99.5896 189.09 100.15 189.122 101.267L189.248 105.777C189.257 106.091 189.379 106.392 189.592 106.623L192.653 109.938C193.41 110.759 192.85 112.09 191.733 112.122L187.223 112.248C186.909 112.257 186.608 112.379 186.377 112.592L183.062 115.653C182.241 116.41 180.91 115.85 180.878 114.733L180.752 110.223C180.743 109.909 180.621 109.608 180.408 109.377L177.347 106.062C176.59 105.241 177.15 103.91 178.267 103.878L182.777 103.752C183.091 103.743 183.392 103.621 183.623 103.408Z' fill='#0F1D58')
 					rect(x='223' y='70' width='17' height='17' rx='8.5' fill='#49A5F1')
 
-
-
-
 block footer
 	.page-footer
-		+button(class="button--bot button--go-to-docs") 
+		+button(class="button--footer") 
 			| Go to My Docs
 
 
